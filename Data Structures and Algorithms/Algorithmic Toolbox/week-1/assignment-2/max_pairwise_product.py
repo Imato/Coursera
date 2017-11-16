@@ -4,8 +4,6 @@ n = int(input())
 a = [int(x) for x in input().split()]
 assert(len(a) == n)
 
-result = 0
-
 '''
 for i in range(0, n):
     for j in range(i+1, n):
@@ -13,7 +11,5 @@ for i in range(0, n):
             result = a[i]*a[j]
 '''
 
-a = a.sort()
-result = a[n] * a[n-1]
-
-print(result)
+a.sort()
+print(a[n - 1] * a[n - 2])
